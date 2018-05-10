@@ -1,0 +1,20 @@
+apply plugin : 'java'
+apply plugin : 'application'
+
+repositories {
+
+	mavenCentral()
+}
+javadoc {
+	title='Gradle Sample Project'
+	options.footer = "Generated on ${new Date().format('dd MM yyyy')}"
+	options.header = "Documention for version ${project.version}"	
+
+}
+dependencies {
+
+	compile "joda-time:joda-time:2.2"
+}
+
+
+mainClassName = 'demo.HelloGradle'
